@@ -1,0 +1,26 @@
+{
+  "name": "MeariSaotome",
+  "version": "1.0.0",
+  "description": "MeariBot, (C) 2020 Kaper365",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kaper365",
+  "license": "MIT",
+  "dependencies": {
+    "booru": "^2.2.3",
+    "canvas": "^2.6.1",
+    "discord.js": "^12.2.0",
+    "mathjs": "^7.0.1",
+    "moment": "^2.26.0",
+    "node-fetch": "^2.6.0",
+    "node-superfetch": "^0.1.10",
+    "querystring": "^0.2.0",
+    "random-puppy": "^1.1.0",
+    "request": "^2.88.2",
+    "snekfetch": "^4.0.4",
+    "wikijs": "^6.0.1",
+    "winston": "^3.2.1"
+  }
+}
