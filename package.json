@@ -12,6 +12,7 @@
     "booru": "^2.2.3",
     "canvas": "^2.6.1",
     "common-tags": "^1.8.0",
+    "dotenv": "x",
     "discord.js": "^12.2.0",
     "discord.js-commando": "git+https://github.com/discordjs/Commando.git",
     "mathjs": "^7.0.1",
