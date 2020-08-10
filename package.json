@@ -8,7 +8,7 @@
   },
    "engines": {
     "node": "12.x"
-  }
+  },
   "author": "Kaper365",
   "license": "MIT",
   "dependencies": {
