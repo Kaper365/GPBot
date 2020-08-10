@@ -1,7 +1,7 @@
 {
-  "name": "MeariSaotome",
+  "name": "GPBot",
   "version": "1.0.0",
-  "description": "MeariBot, (C) 2020 Kaper365",
+  "description": "GPBot, (C) 2020 Kaper365",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
