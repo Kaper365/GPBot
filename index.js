@@ -1,10 +1,11 @@
 const { CommandoClient } = require('discord.js-commando');
+require('dotenv').config();
 const path = require('path');
 const config = require("./config.json");
 const winston = require('winston')
 const client = new CommandoClient({
 	commandPrefix: '~',
-	owner: config.owner,
+	owner: process.env.OWNER,
     unknownCommandResponse: false,
     disableEveryone: true
 });
@@ -55,5 +56,5 @@ client.on("guildDelete", guild => {
 
 client.on('error', console.error);
 
-client.login(config.token);
+client.login();
 
