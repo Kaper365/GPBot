@@ -3,7 +3,7 @@ require('dotenv').config();
 const path = require('path');
 const winston = require('winston')
 const client = new CommandoClient({
-	commandPrefix: '~',
+	commandPrefix: '!-',
 	owner: process.env.OWNER,
     unknownCommandResponse: false,
     disableEveryone: true
@@ -44,7 +44,7 @@ client.user.setPresence({ activity: { name: 'you', type: 'WATCHING' }, status: '
 
 client.on("guildCreate", guild => {
   console.log(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`);
-  client.user.setPresence({ activity: { name: 'you', type: 'WATCHING' }, status: 'dnd' });
+  client.user.setPresence({ activity: { name: 'prefix is !-', type: 'PLAYING' }});
 });
 
 client.on("guildDelete", guild => {
