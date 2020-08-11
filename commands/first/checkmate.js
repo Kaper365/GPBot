@@ -7,7 +7,7 @@ module.exports = class ChessCommand extends Command {
 			name: 'checkmate',
 			aliases: ['check', 'chess'],
 			group: 'first',
-			memberName: 'checkmatee',
+			memberName: 'checkmate',
 			description: 'Checkmate.',
 		});
 }
