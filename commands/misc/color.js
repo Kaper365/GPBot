@@ -8,7 +8,6 @@ module.exports = class ColorCommand extends Command {
             aliases: ['colour', 'hex'],
             group: 'misc',
             memberName: 'color',
-            guildOnly: true,
             description: 'Shows a random color or a preview of the given color!',
             examples: ['~color <color>']
         });
