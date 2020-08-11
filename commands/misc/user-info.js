@@ -25,7 +25,6 @@ module.exports = class UserInfoCommand extends Command {
   run(message, { member }) {
     const { user } = member;
     if (user.bot !== true) {
-      message.channel.startTyping();
       const embed = new MessageEmbed()
         .setThumbnail(user.avatarURL())
         .setDescription(`Info on **${user.tag}** (ID: ${user.id})`)
@@ -55,7 +54,6 @@ module.exports = class UserInfoCommand extends Command {
         message.channel.say({
           embed
         });
-        message.channel.stopTyping();
       });
     }
   }
