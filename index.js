@@ -39,21 +39,18 @@ client.registry
 
 client.once('ready', () => {
 	console.log(`${client.user.tag} \/ ${client.guilds.cache.size} guilds`);
-client.user.setPresence({ activity: { name: 'you', type: 'WATCHING' }, status: 'dnd' });
+client.user.setPresence({ activity: { name: 'prefix is !-', type: 'PLAYING' }});
 });
 
 client.on("guildCreate", guild => {
   console.log(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`);
-  client.user.setPresence({ activity: { name: 'prefix is !-', type: 'PLAYING' }});
 });
 
 client.on("guildDelete", guild => {
   // this event triggers when the bot is removed from a guild.
   console.log(`I have been removed from: ${guild.name} (id: ${guild.id})`);
-  client.user.setPresence({ activity: { name: 'you', type: 'WATCHING' }, status: 'dnd' });
 });
 
 client.on('error', console.error);
 
 client.login();
-
