@@ -37,6 +37,9 @@ module.exports = class UserInfoCommand extends Command {
         embed
       });
     } else if (user.bot === true) {
+      request.get(`https://discordbots.org/api/bots/${user.id}`, (err, res, body) => {
+        if (err) return console.error;
+        body = JSON.parse(body);
         const embed = new MessageEmbed()
           .setThumbnail(user.avatarURL())
           .setDescription(`Info on **${user.tag}** (ID: \`${user.id}\`)`)
@@ -46,7 +49,7 @@ module.exports = class UserInfoCommand extends Command {
           .addField('**User Info:**', `Created at: ${user.createdAt}\n${user.bot ? 'Account Type: Bot' : 'Account Type: User'}\nStatus: ${user.presence.status}\nGame: ${user.presence.game ? user.presence.game.name : 'None'}`)
           .addField('**Bot Info:**', `Servers: ${body.server_count ? `${body.server_count}` : 'Could not get server count'}`)
 	  .setFooter(`Powered by ${this.client.user.username}`, `${this.client.user.avatarURL()}`);
-        message.channel.say({
+        message.channel.send({
           embed
         });
       });
