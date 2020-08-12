@@ -36,12 +36,7 @@ module.exports = class UserInfoCommand extends Command {
       message.channel.send({
         embed
       });
-      message.channel.stopTyping();
     } else if (user.bot === true) {
-      message.channel.startTyping();
-      request.get(`https://discordbots.org/api/bots/${user.id}`, (err, res, body) => {
-        if (err) return console.error;
-        body = JSON.parse(body);
         const embed = new MessageEmbed()
           .setThumbnail(user.avatarURL())
           .setDescription(`Info on **${user.tag}** (ID: \`${user.id}\`)`)
