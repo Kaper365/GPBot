@@ -29,7 +29,7 @@ client.registry
 	.registerGroups([
 		['first', 'Vanilla'],
 		['misc', 'Miscellaneous'],
-		['moderation', 'Moderation' ],
+		['util', 'Utility' ],
 		['owner', 'Owner-only'],
 	])
 	.registerDefaultGroups()
