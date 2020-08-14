@@ -6,7 +6,7 @@ module.exports = class ListGuildsCommand extends Command {
     super(bot, {
       name: 'listguilds',
       aliases: ['listservers', 'listallservers'],
-      group: 'control',
+      group: 'owner',
       memberName: 'listguilds',
       description: 'Lists information about all the servers the bot is in.',
       details: oneLine`

@@ -4,10 +4,10 @@ const request = require('node-superfetch');
 module.exports = class CreateQRCodeCommand extends Command {
 	constructor(client) {
 		super(client, {
-			name: 'create-qr-code',
+			name: 'qr',
 			aliases: ['create-qr'],
-			group: 'edit-image',
-			memberName: 'create-qr-code',
+			group: 'misc',
+			memberName: 'qr',
 			description: 'Converts text to a QR Code.',
 			credit: [
 				{
