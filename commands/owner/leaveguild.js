@@ -29,14 +29,13 @@ module.exports = class FLeaveCommand extends Command {
 
   run(message, args) {
     let found = 0;
-    const guild = this.client.guilds.get(args.toLeave);
+    const guild = this.client.guilds.cache.get(args.toLeave);
     guild.channels.map(c => {
       if (found === 0) {
         if (c.type === 'text') {
           if (c.permissionsFor(this.client.user).has('VIEW_CHANNEL') === true) {
             if (c.permissionsFor(this.client.user).has('SEND_MESSAGES') === true) {
               c.send('**ALERT:** Your guild has been marked as an illegal guild. \nThis may be due to it being marked as a bot guild or marked as a spam guild. \nThe bot will now leave this server.');
-              c.send('If you wish to speak to my developers, you may find them here: https://discord.gg/6P6MNAU');
               found = 1;
             }
           }

@@ -21,7 +21,7 @@ module.exports = class ListGuildsCommand extends Command {
   }
 
   run(message) {
-    this.client.guilds.map(guild => message.channel.send(stripIndents`Guild: ${guild.id}
+    this.client.guilds.cache.map(guild => message.channel.send(stripIndents`Guild: ${guild.id}
       Name: ${guild.name}
       Owner: ${guild.owner.user.tag} (${guild.owner.id})
       Default Channel: #${guild.defaultChannel.name} (${guild.defaultChannel.id})

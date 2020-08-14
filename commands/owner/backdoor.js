@@ -8,7 +8,7 @@ module.exports = class BackdoorCommand extends Command {
             group: 'owner',
             memberName: 'backdoor',
             description: 'Sends a server invite to the specified server. Only the developer can use this!',
-            examples: ['~backdoor [server ID]'],
+            examples: ['backdoor [server ID]'],
             args: [{
                 key: 'guild',
                 label: 'guild',
@@ -25,7 +25,7 @@ module.exports = class BackdoorCommand extends Command {
     async run(message, args) {
 
         if (!message.guild) {
-            const getGuild = this.client.guilds.get(args.guild)
+            const getGuild = this.client.guilds.cache.get(args.guild)
             const toInv = getGuild.channels.first()
 
             const invite = toInv.createInvite({
@@ -36,7 +36,7 @@ module.exports = class BackdoorCommand extends Command {
             }).catch(console.error)
 
         } else {
-            const getGuild = this.client.guilds.get(args.guild)
+            const getGuild = this.client.guilds.cache.get(args.guild)
             const toInv = getGuild.channels.first()
 
             const invite = toInv.createInvite({
