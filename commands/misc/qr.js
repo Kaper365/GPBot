@@ -7,7 +7,7 @@ module.exports = class CreateQRCodeCommand extends Command {
 			name: 'create-qr-code',
 			aliases: ['create-qr'],
 			group: 'misc',
-			memberName: 'create-qr-code',
+			memberName: 'qr',
 			description: 'Converts text to a QR Code.',
 			credit: [
 				{
