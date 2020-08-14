@@ -4,10 +4,10 @@ const { oneLine } = require('common-tags');
 module.exports = class FLeaveCommand extends Command {
   constructor(bot) {
     super(bot, {
-      name: 'fleave',
+      name: 'leaveguild',
       aliases: ['forceleave', 'leaveguild', 'removeguild'],
-      group: 'control',
-      memberName: 'fleave',
+      group: 'owner',
+      memberName: 'leaveguild',
       description: 'Leaves a guild.',
       details: oneLine`
 				This command force leaves a guild.
