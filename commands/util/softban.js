@@ -42,19 +42,19 @@ module.exports = class SoftbanCommand extends Command {
         .setColor("#d90000");
         let embed_you = new MessageEmbed()
         .setTitle(`S-Senpai!`)
-        .setDescription(`I'd never dare to softban you!`)
+        .setDescription(`You can't softban yourself.`)
         .setTimestamp()
         .setFooter(`Powered by ${this.client.user.username}`, `${this.client.user.avatarURL()}`)
         .setColor("#d90000");
         let embed_me = new MessageEmbed()
         .setTitle(`W-What?`)
-        .setDescription(`I- I can't softban myself, baka!`)
+        .setDescription(`I can#t be softbanned this way.`)
         .setTimestamp()
         .setFooter(`Powered by ${this.client.user.username}`, `${this.client.user.avatarURL()}`)
         .setColor("#d90000");
         let embed_err = new MessageEmbed()
         .setTitle(`Something happened.`)
-        .setDescription(`For some reason I couldn't softban this user...`)
+        .setDescription(`For some reason (\`${err}\`) I couldn't softban this user...`)
         .setTimestamp()
         .setFooter(`Powered by ${this.client.user.username}`, `${this.client.user.avatarURL()}`)
         .setColor("#d90000");

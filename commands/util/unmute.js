@@ -12,7 +12,7 @@ module.exports = class UnMuteCommand extends Command {
             clientPermissions: ['MANAGE_CHANNELS', 'MANAGE_MESSAGES'],
             userPermissions: ['MANAGE_CHANNELS', 'MANAGE_MESSAGES'],
             description: 'Unmutes the given user in this channel!',
-            examples: ['~unmute [user]'],
+            examples: ['unmute [user]'],
             throttling: {
                 usages: 1,
                 duration: 15
@@ -35,7 +35,7 @@ module.exports = class UnMuteCommand extends Command {
         .setColor(0xd90000);
         let embed_err = new MessageEmbed()
         .setTitle(`Something happened.`)
-        .setDescription(`For some reason I couldn't unmute this user...`)
+        .setDescription(`For some reason (\`${err}\`) I couldn't unmute this user...`)
         .setTimestamp()
         .setFooter(`Powered by ${this.client.user.username}`, `${this.client.user.avatarURL()}`)
         .setColor(0xd90000);

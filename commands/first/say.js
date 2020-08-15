@@ -6,7 +6,7 @@ module.exports = class SayCommand extends Command {
             name: 'say',
             group: 'first',
             memberName: 'say',
-            description: 'Tell me what to say',
+            description: 'I\'ll repeat **everything** you want',
             examples: ['say Hi there!'],
             throttling: {
                 usages: 1,

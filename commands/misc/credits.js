@@ -14,12 +14,12 @@ module.exports = class UserInfoCommand extends Command {
 
   run(message) {
       const embed = new MessageEmbed()
-	.setThumbnail('https://cdn.discordapp.com/avatars/720303417892929597/c0084bd0c69350f047c6a56e803ba781.png?size=1024')
+	.setThumbnail('https://raw.githubusercontent.com/Kaper365/GPBot/master/assets/logo.png')
 	.setColor('0xd90000')
 	.setTitle(`About ${this.client.user.tag}`)
 	.addField('**Lead Developer**', `Kaper365#0282`)
 	.addField('**Development, Testing**', `Tortzs`)
-	.addField('**Testing**', `Snowrose`)
+	.addField('**Testing**', `Snowrose, dudek`)
         .setFooter(`Powered by ${this.client.user.username}`);
         message.say({
           embed

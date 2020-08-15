@@ -33,9 +33,8 @@ module.exports = class removeRoleCommand extends Command {
       .setTimestamp();
     const embed_dh = new MessageEmbed()
       .setAuthor(message.author.username, message.author.displayAvatarURL)
-      .setColor("RANDOM")
-
-      .setTitle(`Successfully took away the role ${role.name} from ${member.user.tag}`)
+      .setColor("#d90000")
+      .setTitle(`I couldn't take ${role.name} from ${member.user.tag}`)
       .setFooter(`Powered by ${this.client.user.username}`, `${this.client.user.avatarURL()}`)
       .setTimestamp();
         if (!member.roles.cache.has(role.id)) return message.channel.send(embed_dh)

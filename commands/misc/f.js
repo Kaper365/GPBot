@@ -9,7 +9,7 @@ module.exports = class FCommand extends Command {
             group: 'misc',
             memberName: 'f',
             description: 'Press F to pay respects',
-            examples: ['~f <something you want to respect>'],
+            examples: ['f <something you want to respect>'],
             throttling: {
                 usages: 1,
                 duration: 5

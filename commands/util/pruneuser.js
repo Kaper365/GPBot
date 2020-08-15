@@ -12,7 +12,7 @@ module.exports = class PruneUserCommand extends Command {
             userPermissions: ['MANAGE_MESSAGES'],
             memberName: 'pruneuser',
             description: 'Prunes a specified number of messaged from a specific user!',
-            examples: ['~prune [user] [count]'],
+            examples: ['prune [user] [count]'],
             throttling: {
                 usages: 1,
                 duration: 10

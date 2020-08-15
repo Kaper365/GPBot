@@ -35,24 +35,24 @@ module.exports = class MuteCommand extends Command {
         .setColor("#d90000");
         let embed_you = new MessageEmbed()
         .setTitle(`S-Senpai!`)
-        .setDescription(`I'd never dare to mute you!`)
+        .setDescription(`You can't mute yourself.`)
         .setTimestamp()
         .setFooter(`Powered by ${this.client.user.username}`, `${this.client.user.avatarURL()}`)
         .setColor("#d90000");
         let embed_me = new MessageEmbed()
         .setTitle(`W-What?`)
-        .setDescription(`I- I can't mute myself, baka!`)
+        .setDescription(`Sorry, you can't mute me this way.`)
         .setTimestamp()
         .setFooter(`Powered by ${this.client.user.username}`, `${this.client.user.avatarURL()}`)
         .setColor("#d90000");
         let embed_err = new MessageEmbed()
         .setTitle(`Something happened.`)
-        .setDescription(`For some reason I couldn't mute this user...`)
+        .setDescription(`For some reason (\`${err}\`) this user wasn't muted.`)
         .setTimestamp()
         .setFooter(`Powered by ${this.client.user.username}`, `${this.client.user.avatarURL()}`)
         .setColor("#d90000");
         let embed_sure = new MessageEmbed()
-        .setTitle(`Are you sure you want to mute this user? You'll have to use \`!~unmute\` to let them speak again.`)
+        .setTitle(`Are you sure you want to mute this user? You'll have to use \`!-unmute\` to let them speak again.`)
         .setDescription(`Are you sure you want to mute **${member.user.tag}** in **${message.channel.name}**? \`[YES (Y)/NO (N)]\``)
         .setTimestamp()
         .setFooter(`Powered by ${this.client.user.username}`, `${this.client.user.avatarURL()}`)

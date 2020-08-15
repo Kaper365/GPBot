@@ -19,17 +19,17 @@ module.exports = class SayCommand extends Command {
             args: [
                 {
                     key: 'user',
-                    prompt: 'Okay... Send DM to... Who?',
+                    prompt: 'Who is the recipient?',
                     type: 'user'
                 },
                 {
                     key: 'ttle',
-                    prompt: 'And message title?',
+                    prompt: 'What\'s the topic of your message?',
                     type: 'string'
                 },
                 {
                     key: 'content',
-                    prompt: 'And message text?',
+                    prompt: 'And the message text?',
                     type: 'string'
                 }
             ]
@@ -41,7 +41,7 @@ module.exports = class SayCommand extends Command {
             .setTitle(ttle)
             .setDescription(content)
             .setAuthor(msg.author.username, msg.author.displayAvatarURL)
-            .setColor(0x000000)
+            .setColor(0xd90000)
             .setTimestamp()
             .setFooter(`Powered by ${this.client.user.username}`, `${this.client.user.avatarURL()}`);
         return user.send(embed);

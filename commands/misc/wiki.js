@@ -10,7 +10,7 @@ module.exports = class WikiCommand extends Command {
             group: 'misc',
             memberName: 'wiki',
             description: 'Searches for your query on Wikipedia!',
-            examples: ['~wiki [query]'],
+            examples: ['wiki [query]'],
             throttling: {
                 usages: 1,
                 duration: 5

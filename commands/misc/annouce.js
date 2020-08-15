@@ -20,18 +20,17 @@ module.exports = class AnnounceCommand extends Command {
       {
         key: 'annChannel',
         label: 'announce',
-        prompt: 'Where should I post your annoucement?',
+        prompt: 'Where should your annoucement be posted?',
         type: 'channel',
       },
       {
         key: 'annRole',
         label: 'announce',
-        prompt: 'Who should I mention about it?',
+        prompt: 'Who should be mentioned about it?',
         type: 'role',
       }
       ],
-      guarded: true,
-      ownerOnly: true
+      guarded: true
     });
   }
 

@@ -9,7 +9,7 @@ module.exports = class ReverseCommand extends Command {
 			args: [
 				{
 					key: 'text',
-					prompt: 'What text would you like me to reverse?',
+					prompt: 'What text would you like to see in reverse?',
 					type: 'string'
 				}
 			]

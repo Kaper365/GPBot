@@ -11,7 +11,7 @@ module.exports = class MathCommand extends Command {
             group: 'misc',
             memberName: 'math',
             description: 'I\'ll do your math homework!',
-            examples: ['~math [equation]'],
+            examples: ['math [equation]'],
             throttling: {
                 usages: 1,
                 duration: 5
@@ -29,13 +29,13 @@ module.exports = class MathCommand extends Command {
         try {
             var solution = math.evaluate(equation)
         } catch (err) {
-            return message.channel.send(`❎ | I couldn\'t solve that equation! \`${err}\``)
+            return message.channel.send(`I couldn\'t solve that equation! \`${err}\``)
         }
         
         const embed = new Discord.MessageEmbed()
             .setColor('#767CC1')
-            .addField('**📥 Expression**', `\`\`\`${equation}\`\`\``)
-            .addField('**📤 Result**', `\`\`\`${solution}\`\`\``)
+            .addField('**Expression**', `\`\`\`${equation}\`\`\``)
+            .addField('**Result**', `\`\`\`${solution}\`\`\``)
             .setFooter(`Powered by ${this.client.user.username}`, `${this.client.user.avatarURL()}`);
         return message.channel.send({ embed })
 
