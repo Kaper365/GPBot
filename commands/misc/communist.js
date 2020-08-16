@@ -27,10 +27,10 @@ module.exports = class CommunistCommand extends Command {
 			],
 			args: [
 				{
-					key: 'image',
-					prompt: 'What image would you like to edit?',
-					type: 'image',
-					default: msg => msg.author.displayAvatarURL({ format: 'png', size: 512 })
+					key: 'user',
+					prompt: 'Which user would you like to edit the avatar of?',
+					type: 'user',
+					default: msg => msg.author
 				}
 			]
 		});
@@ -39,7 +39,7 @@ module.exports = class CommunistCommand extends Command {
 	async run(msg, { image }) {
 		try {
 			const base = await loadImage(path.join(__dirname, '..', '..', 'assets', 'images', 'communist.png'));
-			const { body } = await request.get(image);
+			const { body } = await request.get(user.avatarURL);
 			const data = await loadImage(body);
 			const canvas = createCanvas(data.width, data.height);
 			const ctx = canvas.getContext('2d');
