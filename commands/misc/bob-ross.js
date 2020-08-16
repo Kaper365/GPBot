@@ -9,7 +9,7 @@ module.exports = class BobRossCommand extends Command {
 		super(client, {
 			name: 'bob-ross',
 			aliases: ['ross'],
-			group: 'edit-image',
+			group: 'misc',
 			memberName: 'bob-ross',
 			description: 'Draws an image or a user\'s avatar over Bob Ross\' canvas.',
 			throttling: {

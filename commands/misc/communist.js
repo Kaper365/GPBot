@@ -9,7 +9,7 @@ module.exports = class CommunistCommand extends Command {
 		super(client, {
 			name: 'communist',
 			aliases: ['commie', 'communism'],
-			group: 'edit-image',
+			group: 'misc',
 			memberName: 'communist',
 			description: 'Draws the Communist flag over an image or a user\'s avatar.',
 			throttling: {
