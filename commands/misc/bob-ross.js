@@ -41,7 +41,7 @@ module.exports = class BobRossCommand extends Command {
 		});
 	}
 
-	async run(msg, { image }) {
+	async run(msg, { user}) {
 		try {
 			const base = await loadImage(path.join(__dirname, '..', '..', 'assets', 'images', 'bob-ross.png'));
 			const { body } = await request.get(user.avatarURL);
