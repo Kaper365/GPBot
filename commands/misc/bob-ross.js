@@ -41,10 +41,9 @@ module.exports = class BobRossCommand extends Command {
 	}
 
 	async run(msg, { user }) {
-		const avatarURL = user.avatarURL({ format: 'png', size: 512 });
 		try {
 			const base = await loadImage(path.join(__dirname, '..', '..', 'assets', 'images', 'bob-ross.png'));
-			const { body } = await request.get(avatarURL);
+			const { body } = await request.get(user.avatarURL({ format: 'png', size: 512 }));
 			const avatar = await loadImage(body);
 			const canvas = createCanvas(base.width, base.height);
 			const ctx = canvas.getContext('2d');
@@ -52,7 +51,7 @@ module.exports = class BobRossCommand extends Command {
 			ctx.fillRect(0, 0, base.width, base.height);
 			ctx.drawImage(avatar, 15, 20, 440, 440);
 			ctx.drawImage(base, 0, 0);
-			return msg.say({ files: [{ attachment: canvas.toBuffer(), name: 'bob-ross.png' }] });
+			return msg.send({ files: [{ attachment: canvas.toBuffer(), name: 'bob-ross.png' }] });
 		} catch (err) {
 			return msg.reply(`Oh no, an error occurred: \`${err.message}\`. Try again later!`);
 		}
